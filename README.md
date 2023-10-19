@@ -1,5 +1,13 @@
 # virustrajectory
 
+## Introduction
+
+## The aim
+
+## Workflow
+
+## Methods
+
 ## Literature
 
 ### KG
