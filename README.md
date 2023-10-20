@@ -4,6 +4,8 @@
 
 This is a part of a hackathon, in which we are trying to find the correlation of COVID with Chronic diseases, using vector trajectory inference.
 
+Vector databases allow for performance, scalability, and flexibility when working with embeddings.
+
 ## The aim
 
 - Goal 1: to find out the set of conditions that make them more susceptible to COVID, for a given chronic disease
