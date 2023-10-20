@@ -1,12 +1,18 @@
+> CMU / DNAnexus Hackathon 2023
+
 # virustrajectory
 
 ## Introduction
 
-This is a project of the CMU/DNAnexus 2023 Hackathon, in which we are trying to find the correlation of COVID-19 susceptibility with chronic diseases (such as cancer, hypertension or diabetes), using vector trajectory inference.
+This is a project from the CMU/DNAnexus 2023 Hackathon, in which we are trying to find the correlation of COVID-19 susceptibility with chronic diseases (such as cancer, hypertension or diabetes), using vector trajectory inference.
 
-We developed a Python pipeline to create vector database and query it for specific 
+We developed a Python pipeline to create vector database and query it for a specific context in relevant scientific articles.
+
+Embeddings are high-dimensional vectors that facilitate searching for similar context in 
 
 Vector databases allow for performance, scalability, and flexibility when working with embeddings.
+
+We tested our pipeline on a subset of the CORD-19 dataset. 
 
 ## The aim
 
@@ -21,11 +27,15 @@ Vector databases allow for performance, scalability, and flexibility when workin
 
 CORD-19 dataset: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/
 
-- SPECTER LM: https://arxiv.org/pdf/2004.07180.pdf
+The dataset contains metadata and embeddings generated from the articles with SPECTER (Scientific Paper Embeddings using Citation-informed TransformERs) (https://arxiv.org/pdf/2004.07180.pdf ; https://github.com/allenai/specter). SPECTER is a method to generate high-quality article representations. The training and implementation details can be found here: https://arxiv.org/pdf/2004.07180.pdf.
 
 VectorDB: https://jina.ai/news/vectordb-a-python-vector-database-you-just-need-no-more-no-less/
 
-We retrieved the embeddings with references to the orginal articles from the CORD-19 dataset to create a vector database.
+We retrieved the embeddings with references to the orginal articles from the CORD-19 dataset.
+
+We created a vector database with insert, query and retrieve methods.
+
+We used SPECTER to create an embedding for the example query ("").
 
 ## Literature
 
