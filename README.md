@@ -17,6 +17,8 @@ This is a part of a hackathon, in which we are trying to find the correlation of
 
 CORD-19: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/
 
+  SPECTER LM: https://arxiv.org/pdf/2004.07180.pdf
+
 VectorDB: https://jina.ai/news/vectordb-a-python-vector-database-you-just-need-no-more-no-less/
 
 
