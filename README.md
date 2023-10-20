@@ -50,6 +50,12 @@ We used SPECTER to create an embedding for the example query ("What combinations
 
 - Querying the vector database takes ~18 sec.
 
+The jupyter notebooks have been put in the `scripts/` directory.
+
+## Acknowledgments
+
+Thank you to the Organizers of the Hackathon!
+
 ## Literature
 
 ### KG
