@@ -2,15 +2,17 @@
 
 # virustrajectory
 
+A Python pipeline to build the vector database from the CORD-19 dataset and query it for a specific context in relevant scientific articles. Vector databases provide performance, scalability, and flexibility when working with embeddings.
+
 ## Introduction
 
-This is a project from the CMU/DNAnexus 2023 Hackathon, in which we are trying to find the correlation of COVID-19 susceptibility with chronic diseases (such as cancer, hypertension or diabetes), using vector trajectory inference.
+This is a project from the CMU/DNAnexus 2023 Hackathon, in which we are trying to find the correlation of COVID-19 susceptibility with chronic diseases (such as cancer, hypertension, or diabetes) using vector trajectory inference.
 
-We developed a Python pipeline to create vector database and query it for a specific context in relevant scientific articles.
+Our starting point is the CORD-19 database - https://allenai.org/data/cord-19
 
-Embeddings are high-dimensional vectors that facilitate searching for similar context in 
+We first download the model (called SPECTER) trained by the CORD-19 people and create an embedding of a query (such as: "What combinations of features predispose cohorts to virus susceptibility?").
 
-Vector databases allow for performance, scalability, and flexibility when working with embeddings.
+Then, we compare the embedding of this query with all the embeddings in the whole dataset and rank according to the cosine-similarity. The best-ranked paper thus retrieved should be the closest to our query with context.
 
 We tested our pipeline on a subset of the CORD-19 dataset. 
 
@@ -21,7 +23,7 @@ We tested our pipeline on a subset of the CORD-19 dataset.
 
 ## Workflow
 
-<img width="420" alt="Screenshot 2023-10-20 at 1 33 21 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/f3683461-315b-460e-a226-198f9670edf0">
+<img align="center" width="420" alt="Screenshot 2023-10-20 at 1 33 21 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/f3683461-315b-460e-a226-198f9670edf0">
 
 ## Methods
 
@@ -31,11 +33,22 @@ The dataset contains metadata and embeddings generated from the articles with SP
 
 VectorDB: https://jina.ai/news/vectordb-a-python-vector-database-you-just-need-no-more-no-less/
 
-We retrieved the embeddings with references to the orginal articles from the CORD-19 dataset.
+We retrieved the embeddings with references to the original articles from the CORD-19 dataset.
 
-We created a vector database with insert, query and retrieve methods.
+We created a vector database with insert, query, and retrieve methods.
 
-We used SPECTER to create an embedding for the example query ("").
+We used SPECTER to create an embedding for the example query ("What combinations of features predispose cohorts to virus susceptibility?").
+
+## Initial, naive ideas-
+
+- Firstly, we were trying to do virus trajectory inference with the purpose of finding the change in trajectory due to COVID, but we couldnt find any longitudinal data with COVID patients, so had to change plans slightly.
+- We were then planning to filter all the papers with a particular word (like 'hypertension') and then out of all the resultant papers, we would rank the words appearing in them by frequency. Using this, we could establish correlation between pairs of words/lists. In this case, the words would lack context, so we didn't go this route. 
+
+## Results
+
+- Building a vector database out of the CORD-19 dataset and storing it in a pickle file reduced the size from 15 GB to 5 GB.
+
+- Querying the vector database takes ~18 sec.
 
 ## Literature
 
