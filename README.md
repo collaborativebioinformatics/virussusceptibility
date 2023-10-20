@@ -2,14 +2,16 @@
 
 ## Introduction
 
-This is a part of a hackathon, in which we are trying to find the correlation of COVID with Chronic diseases, using vector trajectory inference.
+This is a project of the CMU/DNAnexus 2023 Hackathon, in which we are trying to find the correlation of COVID-19 susceptibility with chronic diseases (such as cancer, hypertension or diabetes), using vector trajectory inference.
+
+We developed a Python pipeline to create vector database and query it for specific 
 
 Vector databases allow for performance, scalability, and flexibility when working with embeddings.
 
 ## The aim
 
-- Goal 1: to find out the set of conditions that make them more susceptible to COVID, for a given chronic disease
-- Goal 2: How does this set of conditions vary between different chronic diseases?
+- To find out the set of conditions that make patients with chronic diseases more susceptible to COVID, for a given chronic disease
+- How does this set of conditions vary between different chronic diseases?
 
 ## Workflow
 
@@ -17,12 +19,13 @@ Vector databases allow for performance, scalability, and flexibility when workin
 
 ## Methods
 
-CORD-19: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/
+CORD-19 dataset: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/
 
-  SPECTER LM: https://arxiv.org/pdf/2004.07180.pdf
+- SPECTER LM: https://arxiv.org/pdf/2004.07180.pdf
 
 VectorDB: https://jina.ai/news/vectordb-a-python-vector-database-you-just-need-no-more-no-less/
 
+We retrieved the embeddings with references to the orginal articles from the CORD-19 dataset to create a vector database.
 
 ## Literature
 
@@ -40,7 +43,8 @@ bioRxiv 2023.02.11.528088; doi: https://doi.org/10.1101/2023.02.11.528088
 8. E. D. Madiga and S. Iloga, "Enhancing Vector Comparison Using HMMs," in IEEE Access, vol. 11, pp. 96939-96953, 2023, doi: 10.1109/ACCESS.2023.3312019
 ### Vector dbs
 9. https://learn.microsoft.com/en-us/semantic-kernel/memories/vector-db
+10. https://www.linkedin.com/pulse/vector-databases-demystified-part-2-building-your-own-adie-kaye/
 ### Disease trajectory analysis
-10. William D. Rooney, Yosef A. Berlow, William T. Triplett, Sean C. Forbes, Rebecca J. Willcocks, Dah-Jyuu Wang, Ishu Arpan, Harneet Arora, Claudia Senesac, Donovan J. Lott, Gihan Tennekoon, Richard Finkel, Barry S. Russman, Erika L. Finanger, Saptarshi Chakraborty, Elliott O'Brien, Brendan Moloney, Alison Barnard, H. Lee Sweeney, Michael J. Daniels, Glenn A. Walter, Krista Vandenborne
+11. William D. Rooney, Yosef A. Berlow, William T. Triplett, Sean C. Forbes, Rebecca J. Willcocks, Dah-Jyuu Wang, Ishu Arpan, Harneet Arora, Claudia Senesac, Donovan J. Lott, Gihan Tennekoon, Richard Finkel, Barry S. Russman, Erika L. Finanger, Saptarshi Chakraborty, Elliott O'Brien, Brendan Moloney, Alison Barnard, H. Lee Sweeney, Michael J. Daniels, Glenn A. Walter, Krista Vandenborne
 Neurology Apr 2020, 94 (15) e1622-e1633; DOI: 10.1212/WNL.0000000000009244
 11. I Delor, J-E Charoin, R Gieschke, S Retout, P Jacqmin, Modeling Alzheimer's Disease Progression Using Disease Onset Time and Disease Trajectory Concepts Applied to CDR-SOB Scores From ADNI, https://doi.org/10.1038/psp.2013.54
