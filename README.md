@@ -15,6 +15,11 @@ This is a part of a hackathon, in which we are trying to find the correlation of
 
 ## Methods
 
+CORD-19: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/
+
+VectorDB: https://jina.ai/news/vectordb-a-python-vector-database-you-just-need-no-more-no-less/
+
+
 ## Literature
 
 ### KG
