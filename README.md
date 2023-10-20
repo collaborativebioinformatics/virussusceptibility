@@ -21,7 +21,7 @@ We tested our pipeline on a subset of the CORD-19 dataset.
 
 ## Workflow
 
-<img width="462" alt="Screenshot 2023-10-19 at 2 50 06 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/089f13fe-8ce9-4e5e-9d09-ea611960a5f3">
+<img width="420" alt="Screenshot 2023-10-20 at 1 33 21 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/f3683461-315b-460e-a226-198f9670edf0">
 
 ## Methods
 
