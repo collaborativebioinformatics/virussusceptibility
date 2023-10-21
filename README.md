@@ -58,6 +58,8 @@ As a proof of principle we created a dataset of small number of articles and emb
 
 ## Acknowledgments
 
+The Hackathon was organized at the Carnegie Mellon Libraries.
+
 [DNAnexus](dnanexus.com) provided computing resources for this project.
 
 ### Thank you to the Organizers of the CMU / DNAnexus Hackathon 2023!
