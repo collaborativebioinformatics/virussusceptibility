@@ -56,6 +56,11 @@ Then, as a proof of principle we created a dataset of small number of articles (
 - develop a more efficient method to query the vector database
 - use the vector database to query for scientific questions, such as "What combinations of features predispose cohorts to virus susceptibility?" or "Which of these combinations differ between chronic diseases?"
 
+## Contributors
+
+- Shashank Katiyar (shashanksk31@gmail.com)
+- Jędrzej Kubica (jj.kubica@student.uw.edu.pl)
+
 ## Acknowledgments
 
 The Hackathon was organized at the [Carnegie Mellon Libraries](https://www.cmu.edu).
