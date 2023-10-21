@@ -17,9 +17,13 @@ Moreover, as a proof of principle, we created our own vector database out of a s
 - To find out a set of conditions that make patients with chronic diseases more susceptible to Covid-19.
 - Does this set of conditions vary between different chronic diseases?
 
-## Workflow
+## Workflow for CORD-19
 
 <img width="359" alt="Screenshot 2023-10-21 at 17 49 40" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/82537630/97d96101-acc6-4591-9f0e-3627fb5b87f0">
+
+## Workflow for custom dataset
+
+
 
 ## Methods
 
@@ -32,7 +36,7 @@ We downloaded SPECTER from GitHub (https://github.com/allenai/specter) and used 
 
 > Remark: Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection [5, 6] -- specifically Gaussian random projection [7]. Then we used cosine similarity to search for articles that would be the most relevant to the query.
 
-As a proof of principle we created a dataset of small number of articles and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/proof_of_principle.ipynb`.
+As a proof of principle we created a dataset of small number of articles (1000) and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/query_custom_dataset.ipynb`.
 
 ## Initial, naive ideas-
 
@@ -45,16 +49,20 @@ As a proof of principle we created a dataset of small number of articles and emb
 - Querying the vector database with the embedded query takes ~18 sec; with the query embedded and treated with random projectrion ~6sec.
 - reproduciblity
 
-### example query
+### example query for CORD-19
 
 <img width="444" alt="Screenshot 2023-10-21 at 17 01 00" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/82537630/a62abb14-656b-4b7d-b505-e8eb694d3f62">
 
-### example result
+### example result for CORD-19
 
 <img width="519" alt="Screenshot 2023-10-21 at 16 56 49" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/82537630/bdd7d566-3b70-452a-b932-4fd0e0bbf8df">
 
 
 <img width="515" alt="Screenshot 2023-10-21 at 17 02 19" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/82537630/1675736b-851d-4a5e-960b-a01596a0c979">
+
+### example result for custom dataset
+
+### example result for custom dataset
 
 ## Acknowledgments
 
