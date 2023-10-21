@@ -19,7 +19,7 @@ Moreover, as a proof of principle, we created our own vector database out of a s
 
 ## Workflow
 
-<img align="center" width="420" alt="Screenshot 2023-10-20 at 1 33 21 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/f3683461-315b-460e-a226-198f9670edf0">
+<img width="359" alt="Screenshot 2023-10-21 at 17 49 40" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/82537630/97d96101-acc6-4591-9f0e-3627fb5b87f0">
 
 ## Methods
 
