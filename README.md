@@ -32,7 +32,7 @@ We downloaded SPECTER from GitHub (https://github.com/allenai/specter) and used 
 
 > Remark: Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection [5, 6] -- specifically Gaussian random projection [7]. Then we used cosine similarity to search for articles that would be the most relevant to the query.
 
-As a proof of principle we created a dataset of small number of articles (10.000) and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/query_custom_dataset.ipynb`.
+Then, as a proof of principle we created a dataset of small number of articles (10.000) and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/query_custom_dataset.ipynb`.
 
 ## Initial, naive ideas-
 
