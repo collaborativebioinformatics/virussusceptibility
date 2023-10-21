@@ -8,8 +8,6 @@ A Python pipeline to build a vector database from the CORD-19 dataset and query 
 
 This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on finding the correlation between COVID-19 susceptibility and chronic diseases (such as cancer, hypertension, or diabetes) using vector comparison inference. We built a vector databases out of the CORD-19 dataset (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/) to provide improvement in performance, scalability and flexibility of searching for relevant articles to certain queries (https://www.pinecone.io/learn/vector-database/).
 
-Then, we compare the embedding of this query with all the embeddings in the whole dataset and rank according to the cosine-similarity. The best-ranked paper thus retrieved should be the closest to our query with context.
-
 We tested our pipeline on a subset of the CORD-19 dataset, as well as on the whole CORD-19 dataset. 
 
 ## The aim
@@ -25,8 +23,9 @@ We tested our pipeline on a subset of the CORD-19 dataset, as well as on the who
 
 The CORD-19 dataset contains metadata and embeddings generated from articles related to Covid-19. We retrieved the embeddings with references to the original articles from the dataset. The embedding were generated with SPECTER (Scientific Paper Embeddings using Citation-informed TransformERs) (https://arxiv.org/pdf/2004.07180.pdf ; https://github.com/allenai/specter). SPECTER is a method to generate high-quality article representations. The training of the model and its implementation details can be found in the original article (https://arxiv.org/pdf/2004.07180.pdf). We created a vector database with 'insert', 'query', and 'retrieve' methods. Then, we inserted the CORD-19 embedding into the vector database.
 
-We download SPECTER from GitHub (https://github.com/allenai/specter) and used it to create an embedding for the example query ("What combinations of features predispose cohorts to virus susceptibility?").
+We download SPECTER from GitHub (https://github.com/allenai/specter) and used it to create an embedding for the example query ("What combinations of features predispose cohorts to virus susceptibility?"). Then, we compare the embedding of this query with all the embeddings in the dataset and rank the comparisons according to cosine similarity. The best-ranked paper thus retrieved should be the closest to our query in terms of the context (it should have the highest cosine similarity measure).
 
+Remark:
 Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection (http://people.ee.duke.edu/~lcarin/p93.pdf ; https://towardsdatascience.com/random-projection-in-python-705883a19e48) -- Gaussian random projection (https://scikit-learn.org/stable/modules/generated/sklearn.random_projection.GaussianRandomProjection.html). Then we used cosine similarity to search for articles that would be the most relevant to the query.
 
 The jupyter notebooks have been put in the `scripts/` directory.
