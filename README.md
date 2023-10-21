@@ -43,7 +43,7 @@ The jupyter notebooks have been put in the `scripts/` directory.
 
 ## Acknowledgments
 
-Thank you to the Organizers of the Hackathon!
+## Thank you to the Organizers of the CMU / DNAnexus Hackathon 2023!
 
 ## Bibliography
 1. Wang LL, Lo K, Chandrasekhar Y, Reas R, Yang J, Burdick D, Eide D, Funk K, Katsis Y, Kinney R, Li Y, Liu Z, Merrill W, Mooney P, Murdick D, Rishi D, Sheehan J, Shen Z, Stilson B, Wade AD, Wang K, Wang NXR, Wilhelm C, Xie B, Raymond D, Weld DS, Etzioni O, Kohlmeier S. CORD-19: The Covid-19 Open Research Dataset. ArXiv [Preprint]. 2020 Apr 22:arXiv:2004.10706v4. PMID: 32510522; PMCID: PMC7251955.
