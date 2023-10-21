@@ -10,7 +10,9 @@ This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on fin
 
 We tested our pipeline on a subset of the CORD-19 dataset, as well as on the whole CORD-19 dataset. 
 
-## The aim
+Moreover, as a proof of principle, we created our own vector database out of a small number of articles embedded with SPECTER and tested the relevant article retrieval.
+
+## The aims
 
 - To find out a set of conditions that make patients with chronic diseases more susceptible to Covid-19.
 - Does this set of conditions vary between different chronic diseases?
@@ -21,6 +23,8 @@ We tested our pipeline on a subset of the CORD-19 dataset, as well as on the who
 
 ## Methods
 
+The jupyter notebooks have been put in the `scripts/` directory.
+
 The CORD-19 dataset contains metadata and embeddings generated from articles related to Covid-19. We retrieved the embeddings with references to the original articles from the dataset. The embedding were generated with SPECTER (Scientific Paper Embeddings using Citation-informed TransformERs) [4]. SPECTER is a method to generate high-quality article representations. The training of the model and its implementation details can be found in the original article [4]. We created a vector database with 'insert', 'query', and 'retrieve' methods [9]. Then, we inserted the CORD-19 embedding into the vector database.
 
 We download SPECTER from GitHub (https://github.com/allenai/specter) and used it to create an embedding for the example query ("What combinations of features predispose cohorts to virus susceptibility?"). Then, we compare the embedding of this query with all the embeddings in the dataset and rank the comparisons according to cosine similarity. The best-ranked paper thus retrieved should be the closest to our query in terms of the context (it should have the highest cosine similarity measure).
@@ -28,7 +32,7 @@ We download SPECTER from GitHub (https://github.com/allenai/specter) and used it
 Remark:
 Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection [5, 6] -- Gaussian random projection [7]. Then we used cosine similarity to search for articles that would be the most relevant to the query.
 
-The jupyter notebooks have been put in the `scripts/` directory.
+As a proof of principle we created a dataset of small number of articles and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/proof_of_principle.ipynb`.
 
 ## Initial, naive ideas-
 
@@ -54,7 +58,7 @@ The jupyter notebooks have been put in the `scripts/` directory.
 
 ## Acknowledgments
 
-
+[DNAnexus](dnanexus.com) provided computing resources for this project.
 
 ### Thank you to the Organizers of the CMU / DNAnexus Hackathon 2023!
 
