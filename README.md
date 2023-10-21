@@ -10,7 +10,7 @@ This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on fin
 
 We tested our pipeline on a subset of the CORD-19 dataset, as well as on the whole CORD-19 dataset. 
 
-Moreover, as a proof of principle, we created our own vector database out of a small number of articles embedded with SPECTER and tested the relevant article retrieval.
+Moreover,  we created our own vector database out of a small number of articles from the CORD-19 dataset, embedded with SPECTER and tested the relevant article retrieval.
 
 ## The aims
 
@@ -32,7 +32,7 @@ We downloaded SPECTER from GitHub (https://github.com/allenai/specter) and used 
 
 > Remark: Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection [5, 6] -- specifically Gaussian random projection [7]. Then we used cosine similarity to search for articles that would be the most relevant to the query.
 
-As a proof of principle we created a dataset of small number of articles (1000) and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/query_custom_dataset.ipynb`.
+As a proof of principle we created a dataset of small number of articles (10.000) and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/query_custom_dataset.ipynb`.
 
 ## Initial, naive ideas-
 
@@ -41,9 +41,9 @@ As a proof of principle we created a dataset of small number of articles (1000) 
 
 ## Results
 
-- Building a vector database out of the CORD-19 dataset and storing it in a pickle file reduced the size from 15 GB to 5 GB.
-- Querying the vector database with the embedded query takes ~18 sec; with the query embedded and treated with random projectrion ~6sec.
-- reproduciblity
+- Building and quering the vector database made out of the embeddings from the CORD-19 dataset didn't show the expected result. This highlights a possiblity of improvement in data and code reproducibility.
+- Building our own custom vector database from the CORD-19 articles and quering yields articles relevant to the query.
+- Querying the vector database with the embedded query takes ~190 ms.
 
 ### example query for CORD-19
 
