@@ -39,7 +39,7 @@ The jupyter notebooks have been put in the `scripts/` directory.
 
 - Building a vector database out of the CORD-19 dataset and storing it in a pickle file reduced the size from 15 GB to 5 GB.
 - Querying the vector database with the embedded query takes ~18 sec.
-- 
+- reproduciblity
 
 ### example query
 
