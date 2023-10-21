@@ -1,4 +1,4 @@
-> CMU / DNAnexus Hackathon 2023
+> CMU / DNAnexus Hackathon, October 2023
 
 # virustrajectory
 
