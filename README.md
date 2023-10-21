@@ -15,8 +15,7 @@ This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on fin
 
 ## Workflow
 
-<img width="1224" alt="Screenshot 2023-10-21 at 2 33 41 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/3a0b7773-4f5e-4754-b682-c137bb2d5b1f">
-
+<img width="1300" alt="Screenshot 2023-10-21 at 2 42 43 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/f49580ee-5129-44a2-a00c-5b1bf3dc2dd1">
 
 ## Methods
 
