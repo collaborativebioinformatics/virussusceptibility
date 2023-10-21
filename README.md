@@ -34,11 +34,6 @@ We downloaded SPECTER from GitHub (https://github.com/allenai/specter) and used 
 
 Then, as a proof of principle we created a dataset of small number of articles (10.000) and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/query_custom_dataset.ipynb`.
 
-## Initial, naive ideas-
-
-- Firstly, we were trying to do virus trajectory inference with the purpose of finding the change in trajectory due to COVID, but we couldnt find any longitudinal data with COVID patients, so had to change plans slightly.
-- We were then planning to filter all the papers with a particular word (like 'hypertension') and then out of all the resultant papers, we would rank the words appearing in them by frequency. Using this, we could establish correlation between pairs of words/lists. In this case, the words would lack context, so we didn't go this route. 
-
 ## Results
 
 - Building and quering the vector database made out of the embeddings from the CORD-19 dataset didn't show the expected result. This highlights a possiblity of improvement in data and code reproducibility.
