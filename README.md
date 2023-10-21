@@ -39,7 +39,10 @@ The jupyter notebooks have been put in the `scripts/` directory.
 
 - Building a vector database out of the CORD-19 dataset and storing it in a pickle file reduced the size from 15 GB to 5 GB.
 - Querying the vector database with the embedded query takes ~18 sec.
-- 
+
+### An example result
+
+<img width="519" alt="Screenshot 2023-10-21 at 16 56 49" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/82537630/bdd7d566-3b70-452a-b932-4fd0e0bbf8df">
 
 ## Acknowledgments
 
