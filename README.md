@@ -29,8 +29,8 @@ The CORD-19 dataset contains metadata and embeddings generated from articles rel
 
 We downloaded SPECTER from GitHub (https://github.com/allenai/specter) and used it to create an embedding for the example query ("What combinations of features predispose cohorts to virus susceptibility?"). Then, we compare the embedding of this query with all the embeddings in the dataset and rank the comparisons according to cosine similarity. The best-ranked paper thus retrieved should be the closest to our query in terms of the context (it should have the highest cosine similarity measure).
 
-Remark:
-Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection [5, 6] -- Gaussian random projection [7]. Then we used cosine similarity to search for articles that would be the most relevant to the query.
+
+> Remark: Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection [5, 6] -- Gaussian random projection [7]. Then we used cosine similarity to search for articles that would be the most relevant to the query.
 
 As a proof of principle we created a dataset of small number of articles and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/proof_of_principle.ipynb`.
 
