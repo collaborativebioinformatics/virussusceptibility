@@ -55,6 +55,7 @@ Then, as a proof of principle we created a dataset of small number of articles (
 - create a vector database of a greater number of articles related to Covid-19 (e.g., all 1 million CORD-19 articles)
 - develop a more efficient method to query the vector database (prompt construction)
 - use the vector database to query for scientific questions, such as "What combinations of features predispose cohorts to virus susceptibility?" or "Which of these combinations differ between chronic diseases?"
+- incorporate the dataset into a meta vector to speed up the initialization of the vector database
 
 ## Contributors
 
