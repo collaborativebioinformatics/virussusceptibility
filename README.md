@@ -17,13 +17,9 @@ Moreover, as a proof of principle, we created our own vector database out of a s
 - To find out a set of conditions that make patients with chronic diseases more susceptible to Covid-19.
 - Does this set of conditions vary between different chronic diseases?
 
-## Workflow for CORD-19
+## Workflow
 
 <img width="359" alt="Screenshot 2023-10-21 at 17 49 40" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/82537630/97d96101-acc6-4591-9f0e-3627fb5b87f0">
-
-## Workflow for the custom dataset
-
-
 
 ## Methods
 
