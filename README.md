@@ -6,11 +6,7 @@ A Python pipeline to build a vector database from the CORD-19 dataset and query 
 
 ## Introduction
 
-This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on finding the correlation between COVID-19 susceptibility and chronic diseases (such as cancer, hypertension, or diabetes) using vector comparison inference. There is a growing number of scientific literature related to Covid-19 and innovative initialives are taken up to ask and answer complicate questions to fight the disease [1]. We built a vector databases out of the CORD-19 dataset [2] to provide improvement in performance, scalability and flexibility of searching for relevant articles to certain queries [3, 8].
-
-We tested our pipeline on a subset of the CORD-19 dataset, as well as on the whole CORD-19 dataset. 
-
-Moreover,  we created our own vector database out of a small number of articles from the CORD-19 dataset, embedded with SPECTER and tested the relevant article retrieval.
+This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on finding the correlation between COVID-19 susceptibility and chronic diseases (such as cancer, hypertension, or diabetes) using vector comparison inference. There is a growing number of scientific literature related to Covid-19 and innovative initialives are taken up to ask and answer complicate questions to fight the disease [1]. We built a vector databases out of the CORD-19 dataset [2] to provide improvement in performance, scalability and flexibility of searching for relevant articles to certain queries [3, 8]. We tested our pipeline on a subset of the CORD-19 dataset, as well as on the whole CORD-19 dataset. Moreover,  we created our own vector database out of a small number of articles from the CORD-19 dataset, embedded with SPECTER and tested the relevant article retrieval.
 
 ## The aims
 
@@ -29,16 +25,15 @@ The CORD-19 dataset contains metadata and embeddings generated from articles rel
 
 We downloaded SPECTER from GitHub (https://github.com/allenai/specter) and used it to create an embedding for the example query ("What combinations of features predispose cohorts to virus susceptibility?"). Then, we compare the embedding of this query with all the embeddings in the dataset and rank the comparisons according to cosine similarity. The best-ranked paper thus retrieved should be the closest to our query in terms of the context (it should have the highest cosine similarity measure).
 
-
 > Remark: Cosine similarity turned out to be not suitable for high-dimensional vector comparison. For this reason we reduced the dimensionality of vectors with random projection [5, 6] -- specifically Gaussian random projection [7]. Then we used cosine similarity to search for articles that would be the most relevant to the query.
 
 Then, as a proof of principle we created a dataset of small number of articles (10.000) and embedded them with SPECTER. Then we inserted the embeddings into a vector database. We tested the retrieval of most relavant articles. The workflow can be found here: `scripts/query_custom_dataset.ipynb`.
 
 ## Results
 
-- Building and quering the vector database made out of the embeddings from the CORD-19 dataset didn't show the expected result. This highlights a possiblity of improvement in data and code reproducibility.
-- Building our own custom vector database from the CORD-19 articles and quering yields articles relevant to the query.
-- Querying the vector database with the embedded query takes ~190 ms.
+- Building and quering the vector database made out of the embeddings from the CORD-19 dataset didn't show the expected result. This highlights a possiblity for improvement in data and code reproducibility.
+- Building our own custom vector database from the CORD-19 articles and quering it yields articles relevant to the query.
+- Querying the vector database with the embedded query takes only ~190 ms.
 
 ### example query for CORD-19
 
