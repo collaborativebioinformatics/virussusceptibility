@@ -6,7 +6,7 @@ A Python pipeline to build a vector database from the CORD-19 dataset and query 
 
 ## Introduction
 
-This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on finding the correlation between COVID-19 susceptibility and chronic diseases (such as cancer, hypertension, or diabetes) using vector comparison inference. We built a vector databases out of the CORD-19 dataset (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/) to provide improvement in performance, scalability and flexibility of searching for relevant articles to certain queries ().
+This is a project from the CMU/DNAnexus 2023 Hackathon which concentrated on finding the correlation between COVID-19 susceptibility and chronic diseases (such as cancer, hypertension, or diabetes) using vector comparison inference. We built a vector databases out of the CORD-19 dataset (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7251955/) to provide improvement in performance, scalability and flexibility of searching for relevant articles to certain queries (https://www.pinecone.io/learn/vector-database/).
 
 Then, we compare the embedding of this query with all the embeddings in the whole dataset and rank according to the cosine-similarity. The best-ranked paper thus retrieved should be the closest to our query with context.
 
