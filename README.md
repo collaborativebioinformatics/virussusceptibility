@@ -58,7 +58,7 @@ As a proof of principle we created a dataset of small number of articles and emb
 
 ## Acknowledgments
 
-The Hackathon was organized at the Carnegie Mellon Libraries.
+The Hackathon was organized at the [Carnegie Mellon Libraries](https://www.cmu.edu).
 
 [DNAnexus](dnanexus.com) provided computing resources for this project.
 
