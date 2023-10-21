@@ -55,6 +55,12 @@ Then, as a proof of principle we created a dataset of small number of articles (
 
 <img width="963" alt="Screenshot 2023-10-21 at 1 14 16 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/920a0b39-190c-41d5-a039-e0d8e5071881">
 
+## Future ideas
+
+- create a vector database of a greater number of articles related to Covid-19 (e.g., all 1 million CORD-19 articles)
+- develop a more efficient method to query the vector database
+- use the vector database to query for scientific questions, such as "What combinations of features predispose cohorts to virus susceptibility?" or "Which of these combinations differ between chronic diseases?"
+
 ## Acknowledgments
 
 The Hackathon was organized at the [Carnegie Mellon Libraries](https://www.cmu.edu).
