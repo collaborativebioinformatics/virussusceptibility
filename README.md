@@ -62,7 +62,7 @@ As a proof of principle we created a dataset of small number of articles (1000) 
 
 ### example result for custom dataset
 
-### example result for custom dataset
+<img width="963" alt="Screenshot 2023-10-21 at 1 14 16 PM" src="https://github.com/collaborativebioinformatics/virustrajectory/assets/72993520/920a0b39-190c-41d5-a039-e0d8e5071881">
 
 ## Acknowledgments
 
