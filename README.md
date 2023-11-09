@@ -1,6 +1,6 @@
 > CMU / DNAnexus Hackathon, October 19-21, 2023
 
-# virustrajectory
+# Virus Susceptibility
 
 A Python pipeline to build a vector database from the CORD-19 dataset and query it for a specific context in search for relevant scientific articles.
 
